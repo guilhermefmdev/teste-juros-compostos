@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/script.js"></script>
+    <title>Simular Investimento</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper{
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 20px 0 40px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        form button {
+            max-width: 480px;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        form input {
+            width: 100%;
+            margin: 5px 0;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="wrapper">
+        <h1>Simular Investimento</h1>
+        <form id="simulationForm">
+            <label>
+                Nome:
+                <input type="text" name="nameInput" required>
+            </label>
+            <label>
+                Mensalidade:
+                <input type="number" name="monthlyInput" required>
+            </label>
+            <label>
+                Tempo:<span></span> 
+                <input type="number" name="timeInput" placeholder="(em Anos)" required>
+            </label>
+
+            <button>Simular</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>

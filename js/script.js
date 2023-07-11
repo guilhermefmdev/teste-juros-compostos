@@ -16,7 +16,7 @@ async function simulate() {
     }
     const jsonInputData = JSON.stringify(inputData)
     
-    const response = await fetch('http://api.mathjs.org/v4/',{
+    const response = await fetch('https://api.mathjs.org/v4/',{
         method: 'POST',
         body: jsonInputData,
         headers: {

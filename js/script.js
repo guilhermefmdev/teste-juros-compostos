@@ -10,13 +10,13 @@ const $modal = document.querySelector('#modal')
 async function simulate() {
     const $monthlyValue = document.forms['form']['monthlyInput'].value
     const $contribTime = document.forms['form']['timeInput'].value
-    const $interestRateValue = document.forms['form']['interestRateInput'].value
+    const $interestRateValue = document.forms['form']['interestRateInput'].value.toLocaleString('EN')
     const inputData = {
         expr: [`${$monthlyValue} * 12 * (((1 + ${$interestRateValue})^ ${$contribTime} - 1) / ${$interestRateValue})`]
     }
     const jsonInputData = JSON.stringify(inputData)
     
-    const response = await fetch('http://api.mathjs.org/v4/',{
+    const response = await fetch('https://api.mathjs.org/v4/',{
         method: 'POST',
         body: jsonInputData,
         headers: {
